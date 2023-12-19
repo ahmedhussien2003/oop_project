@@ -1,13 +1,10 @@
 package com.example.demo;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -51,10 +48,6 @@ public class HelloController implements Initializable {
     private TextField vetpassword;
 
     private List<vet> vets = new ArrayList<>();
-    //private ObservableList<vet>vets= FXCollections.observableArrayList(vets2003);
-
-
-    private List<vet> vets1 = new ArrayList<>();
     private Image image;
     private MyListener myListener;
     private List<vet> getData() {
@@ -68,7 +61,8 @@ public class HelloController implements Initializable {
                 vet1.setName("maysoon");
                 vet1.setId("2022170"+String.valueOf(1));
                 vet1.setPhone("123456789");
-                vet1.setImage_address("/images/vet1.jpg");
+                vet1.setYearsOfExperience(3);
+                //vet1.setImage_address("/controller/vet1.jpg");
                 vets.add(vet1);
             }
 //            else if(i==9)
@@ -77,7 +71,8 @@ public class HelloController implements Initializable {
                 vet1.setName("lamiaa");
                 vet1.setId("2022170"+String.valueOf(2));
                 vet1.setPhone("123456789");
-                vet1.setImage_address("/images/vet1.jpg");
+                vet1.setYearsOfExperience(3);
+                //vet1.setImage_address("/controller/vet1.jpg");
                 vets.add(vet1);
             }
 //            else if(i==7)
@@ -86,7 +81,8 @@ public class HelloController implements Initializable {
                 vet1.setName("rana");
                 vet1.setId("2022170"+String.valueOf(3));
                 vet1.setPhone("123456789");
-                vet1.setImage_address("/images/vet1.jpg");
+                vet1.setYearsOfExperience(3);
+                //vet1.setImage_address("/controller/vet1.jpg");
                 vets.add(vet1);
             }
 //            else if(i==8)
@@ -95,7 +91,8 @@ public class HelloController implements Initializable {
                 vet1.setName("Ali");
                 vet1.setId("2022170"+String.valueOf(4));
                 vet1.setPhone("123456789");
-                vet1.setImage_address("/images/vet1.jpg");
+                vet1.setYearsOfExperience(3);
+                //vet1.setImage_address("/controller/vet1.jpg");
                 vets.add(vet1);
             }
 
@@ -104,7 +101,8 @@ public class HelloController implements Initializable {
                 vet1.setName("Ahmed");
                 vet1.setId("2022170"+String.valueOf(5));
                 vet1.setPhone("123456789");
-                vet1.setImage_address("/images/vet1.jpg");
+                vet1.setYearsOfExperience(3);
+                //vet1.setImage_address("/controller/vet1.jpg");
                 vets.add(vet1);
             }
         {
@@ -112,7 +110,8 @@ public class HelloController implements Initializable {
             vet1.setName("mariam");
             vet1.setId("2022170"+String.valueOf(6));
             vet1.setPhone("123456789");
-            vet1.setImage_address("/images/vet1.jpg");
+            vet1.setYearsOfExperience(3);
+           // vet1.setImage_address("/controller/vet1.jpg");
             vets.add(vet1);
         }
         {
@@ -120,7 +119,8 @@ public class HelloController implements Initializable {
             vet1.setName("naira");
             vet1.setId("2022170"+String.valueOf(7));
             vet1.setPhone("123456789");
-            vet1.setImage_address("/images/vet1.jpg");
+            vet1.setYearsOfExperience(3);
+            //vet1.setImage_address("/controller/vet1.jpg");
             vets.add(vet1);
         }
 //        }
@@ -133,7 +133,7 @@ public class HelloController implements Initializable {
         vetProcess = vet0;
         vetname.setText(vet0.getName());
         vetid.setText(vet0.getId());
-        vetexp.setText("5");
+        vetexp.setText(String.valueOf(vet0.getYearsOfExperience())+" years");
         vetpassword.setText(vet0.getPhone());
 //        image = new Image(getClass().getResourceAsStream(fruit.getImgSrc()));
 //        fruitImg.setImage(image);

@@ -27,7 +27,7 @@ public class VetController {
     private Label vetpassword;
 
     @FXML
-    private SplitMenuButton vetpet;
+    private Label yearsOfExperience;
 
 
     @FXML
@@ -43,7 +43,7 @@ public class VetController {
         vetname.setText(vet2.getName());
         vetid.setText(vet2.getId());
         vetpassword.setText(vet2.getPhone());
-        vetpet.setText("12");
+        yearsOfExperience.setText(String.valueOf(vet2.getYearsOfExperience())+" years");
 //        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/vet1.jpg")));
 //        vetimage.setImage(image);
 
